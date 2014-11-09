@@ -1,0 +1,14 @@
+name: Silent
+description: I do not know what's going on
+meta_description: ""
+disqus_shortname: silentsokolov
+
+markdown: redcarpet
+highlighter: pygments
+logo: false
+paginate: 15
+baseurl: /
+domain_name: 'http://silentsokolov.github.com/'
+
+url: 'http://silentsokolov.github.com'
+author: 'Silent'
