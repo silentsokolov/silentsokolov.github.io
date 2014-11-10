@@ -45,7 +45,7 @@ SearchQuerySet().autocomplete(content_auto='old')
 
 То есть в поисковую выдачу попадут слова включающе любые три символа в поисковом запросе. Причина этому дефольные настройки Elasticsearch, которые [прадлагает](https://github.com/toastdriven/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py#L709) Django Haystack. Как видим, `edge_ngram` имеет стандартный анализатор. Но нам нужно, чтобы поиск находил, только точные совпадения и отсекал лишнее. Чтобы решить эту задачу, мы должны в маппинге явно указать, `index_analyzer` и `search_analyzer`. Это можно сделать явно, запросом к ES:
 
-```
+{% highlight bash %}
 PUT /my_index/my_type/_mapping
 {
     "my_type": {
@@ -57,7 +57,7 @@ PUT /my_index/my_type/_mapping
         }
     }
 }
-```
+{% endhighlight %}
 
 Теперь можно убедиться, что все работает правильно и в результатах нет мусора.
 

@@ -330,10 +330,11 @@ code, tt {
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
-    border: #E3EDF3 1px solid;
-    background: #F7FAFB;
+    border: #262626 1px solid;
+    background: #333333;
     border-radius: 2px;
     display: inline-block;
+    color: #f8f8f2;
 
 }
 
@@ -341,15 +342,16 @@ pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 0 1.75em 0;
-    border: #E3EDF3 1px solid;
+    border: #262626 1px solid;
     width: 100%;
     padding: 10px;
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #F7FAFB;
+    background: #333333;
     border-radius: 3px;
+    color: #f8f8f2;
 }
 
 pre code, tt {
