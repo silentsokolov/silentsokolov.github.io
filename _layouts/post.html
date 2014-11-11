@@ -33,32 +33,32 @@ post_class: post-template
     <article class="post">
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
-            <section class="post-meta">
+            <div class="post-meta">
                 <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
                 {% if page.categories.size > 0 %}
                     {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
                 {% endif %}
                 , tags: {{ tags_content }}
-            </section>
+            </div>
         </header>
 
         {% if page.image %}
         <img src="{{ page.image }}" alt="{{ post.title }}" class="post-image">
         {% endif %}
 
-        <section class="post-content">
+        <div class="post-content">
             {{content}}
-        </section>
+        </div>
 
         {% if page.archive %}
-        <section class="archive">
+        <div class="archive">
             <h5>Archive</h5>
             <ul>
                 {% for post in site.posts %}
                     <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
-        </section>
+        </div>
         {% endif %}
 
         <footer class="post-footer">

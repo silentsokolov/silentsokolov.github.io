@@ -38,12 +38,12 @@ about: 'about.html'
         {% if post.image %}
         <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
         {% endif %}
-        <section class="post-excerpt">
+        <div class="post-excerpt">
             {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
-        </section>
+        </div>
         <footer class="post-meta">
             {% if site.author %}
-                <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
+                <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" />
                 {{ site.author }}
             {% endif %}
             {% if post.categories.size > 0 %}
