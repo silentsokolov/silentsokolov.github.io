@@ -4,6 +4,9 @@ meta_description: ""
 disqus_shortname: silentsokolov
 
 markdown: redcarpet
+redcarpet:
+    extensions: ["tables",]
+
 highlighter: pygments
 logo: false
 paginate: 15
