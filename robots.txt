@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /assets
+
+Sitemap: http://silentsokolov.github.io/sitemap.xml
+Host: silentsokolov.github.io
