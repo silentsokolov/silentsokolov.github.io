@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  "Django Haystack + Elasticsearch: промбемы автодополнения"
 date:   2014-09-03 16:39:00
-tags: [programming, python, django]
 ---
 
 В своих проектах часто использую **Django Haystack** для поиска, в качестве бекэнда выступает **Elasticsearch**. К сожалению, Haystack предоставляет довольно мало возможностей для настройки индексов, все они [вшиты в код](https://github.com/toastdriven/django-haystack/blob/master/haystack/backends/elasticsearch_backend.py#L48). Из-за чего стречаются малкие и серьезные проблемы. С одной из таких проблем столкнулся, когда нужно было реализовать поиск с автодополнением (autocomplete).

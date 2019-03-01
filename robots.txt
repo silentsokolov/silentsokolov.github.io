@@ -1,5 +1,8 @@
-User-agent: *
-Disallow: /assets
+---
+layout: null
+---
 
-Sitemap: http://silentsokolov.github.io/sitemap.xml
-Host: silentsokolov.github.io
+sitemap: {{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}
+
+user-agent: EmailCollector
+disallow: /

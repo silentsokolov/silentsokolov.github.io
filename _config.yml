@@ -1,17 +1,29 @@
-name: Silent
-description: I do not know what's going on
-meta_description: ""
-disqus_shortname: silentsokolov
+# Site Info
+title:              "Silent"
+description:        "I do not know what's going on"
+author_name:        "Dmitriy Sokolov" # change this to your name
+logo_url:           https://avatars3.githubusercontent.com/u/398939?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
 
-markdown: redcarpet
-redcarpet:
-    extensions: ["tables",]
+# Site Settings
+url:                https://silentsokolov.github.io # main url
+baseurl:            /
+permalink:          /:title # Post permalink
+timezone:           Europe/Moscow # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+mathjax:            true  # enables support for mathjax - set to 'false' to disable
 
-highlighter: pygments
-logo: false
-paginate: 15
-baseurl: /
-domain_name: 'http://silentsokolov.github.com/'
+# Site Build
+highlighter:        rouge
+markdown:           kramdown
+kramdown:
+    input:          GFM
+sass:
+    style:          :compressed
 
-url: 'http://silentsokolov.github.com'
-author: 'silent'
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "Gemfile" ]
+plugins:
+  - jekyll-sitemap
+  - jekyll-remote-theme
+
+remote_theme: heiswayi/the-plain
