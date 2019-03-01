@@ -1,8 +1,8 @@
 # Site Info
 title:              "Silent"
 description:        "I do not know what's going on"
-author_name:        "Dmitriy Sokolov" # change this to your name
-logo_url:           https://avatars3.githubusercontent.com/u/398939?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
+author_name:        "silentsokolov" # change this to your name
+logo_url:           https://user-images.githubusercontent.com/398939/53633030-6bb62100-3c27-11e9-8602-b51ef7d56e69.png # Get it from GitHub API: https://api.github.com/users/<username>
 
 # Site Settings
 url:                https://silentsokolov.github.io # main url

@@ -6,4 +6,4 @@ title: About
 Hello!
 
 **Twitter**: [@silentsokolov](https://twitter.com/silentsokolov)  
-**Github**: [silentsokolov](https://github.com/SilentSokolov)  
+**Github**: [silentsokolov](https://github.com/silentsokolov)  
