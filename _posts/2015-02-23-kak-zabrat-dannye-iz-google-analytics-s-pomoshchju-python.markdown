@@ -12,34 +12,34 @@ date:   2015-02-23 12:54:00
 
 Первое, что нужно сделать - это получить возможность работать с сервисами гугла, для этого создадим проект в [Google Console](https://console.developers.google.com/project).
 
-![](/images/ga/S1.png)
+![](/images/2015-02-23/S1.png)
 
 И активируем Google Analytics API для проекта во вкладке "APIs".
 
-![](/images/ga/S2.png)
+![](/images/2015-02-23/S2.png)
 
 Создадим новый Client ID с типом **Service account**.
 
-![](/images/ga/S4.png)
+![](/images/2015-02-23/S4.png)
 
-![](/images/ga/S5.png)
+![](/images/2015-02-23/S5.png)
 
 По завершению будут выдан приватный ключ, которые нужно будет сохранить его на сервера. Если вы его потеряете придется заново создавать Client ID.
 
-![](/images/ga/S6.png)
+![](/images/2015-02-23/S6.png)
 
 Также потребуется email.
 
-![](/images/ga/S7.png)
+![](/images/2015-02-23/S7.png)
 
 
 ### Google Analytics
 
 Теперь, шаг, который почти ни где не описан ... надо выдать права полученному Client ID.
 
-![](/images/ga/S8.png)
+![](/images/2015-02-23/S8.png)
 
-![](/images/ga/S9.png)
+![](/images/2015-02-23/S9.png)
 
 ### Python
 
