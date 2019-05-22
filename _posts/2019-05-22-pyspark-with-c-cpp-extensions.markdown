@@ -33,7 +33,10 @@ ModuleNotFoundError: No module named 'pkg_resources'
 3. С помощью `imp` импортировать модуль. У себя мы написали небольшую обертку для удобства:
 
 ```python
+import imp
+
 from pyspark import SparkFiles
+
 
 def load_lib(name, so_path):
     if name not in sys.modules:
