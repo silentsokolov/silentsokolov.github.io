@@ -31,6 +31,7 @@ ModuleNotFoundError: No module named 'pkg_resources'
 1. Для начала нужно скомпилировать C код в совместимую библиотеку, в ручную или в крайнем случае достать из яйца.
 2. Пробросить библиотеку в Spark, через `--files /path/lib/foo.so,/project/conf.ini`
 3. С помощью `imp` импортировать модуль. У себя мы написали небольшую обертку для удобства:
+
 ```python
 from pyspark import SparkFiles
 
@@ -39,7 +40,9 @@ def load_lib(name, so_path):
         return imp.load_dynamic(name, SparkFiles.get(so_path))
     return sys.modules[name]
 ```
+
 4. Использовать библиотеку:
+
 ```python
 foo = load_lib('foo', 'foo.so')
 data = foo.call_function('hello')
