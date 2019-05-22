@@ -34,6 +34,7 @@ ModuleNotFoundError: No module named 'pkg_resources'
 
 ```python
 import imp
+import sys
 
 from pyspark import SparkFiles
 
