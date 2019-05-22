@@ -41,7 +41,7 @@ def load_lib(name, so_path):
     return sys.modules[name]
 ```
 
-4. Использовать библиотеку:
+Вызов будет следующим:
 
 ```python
 foo = load_lib('foo', 'foo.so')
