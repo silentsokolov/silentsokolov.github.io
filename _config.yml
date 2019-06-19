@@ -2,7 +2,7 @@
 title:              "Silent"
 description:        "I do not know what's going on"
 author_name:        "silentsokolov" # change this to your name
-logo_url:           https://raw.githubusercontent.com/silentsokolov/silentsokolov.github.io/master/images/common/avatar.png # Get it from GitHub API: https://api.github.com/users/<username>
+logo_url:           https://silentsokolov.github.io/images/common/avatar.png # Get it from GitHub API: https://api.github.com/users/<username>
 
 # Site Settings
 url:                https://silentsokolov.github.io # main url
