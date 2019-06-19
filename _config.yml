@@ -1,8 +1,8 @@
 # Site Info
-title:              "Silent"
+title:              "silent"
 description:        "I do not know what's going on"
-author_name:        "silentsokolov" # change this to your name
-logo_url:           https://silentsokolov.github.io/images/common/avatar.png # Get it from GitHub API: https://api.github.com/users/<username>
+author_name:        "silentsokolov"
+logo_url:           https://silentsokolov.github.io/images/common/avatar.png
 
 # Site Settings
 url:                https://silentsokolov.github.io # main url
