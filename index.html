@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section itemscope itemtype="http://schema.org/Blog">
+<section>
 	{% for post in site.posts %}
 			{% unless post.next %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
@@ -13,17 +13,15 @@ layout: default
 					<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 				{% endif %}
 			{% endunless %}
-		<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
 			<ul>
 				<li>
 					<div class="post-date code">
-						<time itemprop="datePublished" content="{{ post.date | date: '%Y-%m-%d' }}" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
+						<time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
 					</div>
 					<div class="title">
-						<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="url"><h4 itemprop="name">{{ post.title }}</h4></a>
+						<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"><h4>{{ post.title }}</h4></a>
 					</div>
 				</li>
 			</ul>
-		</article>
 	{% endfor %}
 </section>
