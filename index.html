@@ -20,7 +20,7 @@ layout: default
 						<time itemprop="datePublished" content="{{ post.date | date: '%Y-%m-%d' }}" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d' }}</time>
 					</div>
 					<div class="title">
-						<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="url"><span itemprop="name">{{ post.title }}</span></a>
+						<a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="url"><h4 itemprop="name">{{ post.title }}</h4></a>
 					</div>
 				</li>
 			</ul>
