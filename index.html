@@ -4,7 +4,6 @@ layout: default
 
 <section itemscope itemtype="http://schema.org/Blog">
 	{% for post in site.posts %}
-		<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
 			{% unless post.next %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 			{% else %}
@@ -14,7 +13,7 @@ layout: default
 					<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 				{% endif %}
 			{% endunless %}
-
+		<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
 			<ul>
 				<li>
 					<div class="post-date code">
