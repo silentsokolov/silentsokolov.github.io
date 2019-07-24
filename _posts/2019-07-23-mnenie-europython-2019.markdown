@@ -1,5 +1,6 @@
 ---
 title:  "Мнение: EuroPython 2019"
+meta_description: "Мнение о конференции EuroPython 2019"
 date:   2019-07-23 11:13:52
 ---
 
