@@ -1,0 +1,58 @@
+silentsokolov
+Dmitriy Sokolov
+==================================================================
+https://keybase.io/silentsokolov
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://silentsokolov.github.io
+  * I am silentsokolov (https://keybase.io/silentsokolov) on keybase.
+  * I have a public key ASANIaT24SoWOzXiIEll5W-xMzmqT13y_rVv6lVxDZagiAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203961ae1c7ae838258c3031fdf5ba75e68608520b0735e4314915bab57b3d94c00a",
+      "host": "keybase.io",
+      "kid": "01200d21a4f6e12a163b35e2204965e56fb13339aa4f5df2feb56fea55710d96a0880a",
+      "uid": "33950b308f8486abf446e0bdc26baa19",
+      "username": "silentsokolov"
+    },
+    "merkle_root": {
+      "ctime": 1568709818,
+      "hash": "b24cf94c013cbbc2d8d306d35649887cca3215b4c4809b3b4e77d32d53e8e5644499e6e6ba1907225108649b9587a88e4fc1052c35505b0bdd05eec7ffe1f14f",
+      "hash_meta": "f890654b638604806ab77e8cf4811a3415ef0dc01a5fd9adbf37c461ada4a8ee",
+      "seqno": 7510255
+    },
+    "service": {
+      "entropy": "/rygyC5z/yAR/OM7sweTdilB",
+      "hostname": "silentsokolov.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.2"
+  },
+  "ctime": 1568709828,
+  "expire_in": 504576000,
+  "prev": "5dbdc24a0aa05d3ebab81f4a99e9e8d6764349ad211f0612858fac34f79c4fee",
+  "seqno": 28,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgDSGk9uEqFjs14iBJZeVvsTM5qk9d8v61b+pVcQ2WoIgKp3BheWxvYWTESpcCHMQgXb3CSgqgXT66uB9Kmeno1nZDSa0hHwYShY+sNPecT+7EIAh1gw4WKBCT1pP90Z7UeFDxd7jtmNiaBhIhVXvLEf95AgHCo3NpZ8RAkr3kRr+LfpQ0iz2ILJ3Gesjup6lHgjZAi6ligWHmJ4VgWSjMvqzcJsvNrHSnhSg1jl+yotdF+zZT0AmXI/28CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOh92SiOCYIPxHRR8lTJg2rnD8iLlTcx+tCRTD+29q0No3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/silentsokolov
+
+==================================================================
