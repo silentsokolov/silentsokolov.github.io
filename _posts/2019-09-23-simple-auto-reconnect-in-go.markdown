@@ -22,39 +22,39 @@ import (
 	"github.com/jackc/pgx"
 )
 
-type databaseInstance struct {
+type DatabaseInstance struct {
 	conn               *pgx.Conn
 	connConfig         pgx.ConnConfig
 	maxConnectAttempts int
 }
 
-func NewConn(URI string, maxAttempts int) (*databaseInstance, error) {
-	connConfig, err := pgx.ParseURI(URI)
+func NewConn(uri string, maxAttempts int) (*DatabaseInstance, error) {
+	connConfig, err := pgx.ParseURI(uri)
 	if err != nil {
 		return nil, err
 	}
 
-	instance := databaseInstance{}
+	instance := DatabaseInstance{}
 	instance.connConfig = connConfig
 	instance.maxConnectAttempts = maxAttempts
 
 	return &instance, err
 }
 
-func (db *databaseInstance) reconnect() (*pgx.Conn, error) {
+func (db *DatabaseInstance) reconnect() (*pgx.Conn, error) {
 	conn, err := pgx.Connect(db.connConfig)
 	if err != nil {
-		return nil, fmt.Errorf("Unable to connection to database: %v", err)
+		return nil, fmt.Errorf("unable to connection to database: %v", err)
 	}
 
 	if err = conn.Ping(context.Background()); err != nil {
-		return nil, fmt.Errorf("Couldn't ping postgre database: %v", err)
+		return nil, fmt.Errorf("couldn't ping postgre database: %v", err)
 	}
 
 	return conn, err
 }
 
-func (db *databaseInstance) GetConn() *pgx.Conn {
+func (db *DatabaseInstance) GetConn() *pgx.Conn {
 	var err error
 
 	if db.conn == nil {
@@ -68,20 +68,20 @@ func (db *databaseInstance) GetConn() *pgx.Conn {
 		ticker := time.NewTicker(5 * time.Second)
 		defer ticker.Stop()
 
-		for {
-			select {
-			case <-ticker.C:
-				if attempt >= db.maxConnectAttempts {
-					log.Fatalf("Connection failed after %d attempt\n", attempt)
-				}
-				attempt += 1
-				log.Println("Reconnecting...")
-				db.conn, err = db.reconnect()
-				if err == nil {
-					return db.conn
-				}
-				log.Printf("Connection was lost. Error: %s. Waiting for 5 sec...\n", err)
+		for range ticker.C {
+			if attempt >= db.maxConnectAttempts {
+				log.Fatalf("connection failed after %d attempt\n", attempt)
 			}
+			attempt++
+
+			log.Println("reconnecting...")
+
+			db.conn, err = db.reconnect()
+			if err == nil {
+				return db.conn
+			}
+
+			log.Printf("connection was lost. Error: %s. Waiting for 5 sec...\n", err)
 		}
 	}
 
