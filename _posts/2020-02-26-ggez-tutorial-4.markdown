@@ -40,7 +40,7 @@ impl GameState {
             radius: BALL_RADIUS,
             velocity: [BALL_VELOCITY_X, BALL_VELOCITY_Y],
         };
-      }
+    }
 }
 ```
 
@@ -80,9 +80,9 @@ self.ball.point.y += self.ball.velocity[1];
 ```rust
 if (self.ball.point.y - self.ball.radius < 0.0)
                 || (self.ball.point.y >= ARENA_HEIGHT - self.ball.radius)
-            {
-                self.ball.velocity[1] = -self.ball.velocity[1];
-            }
+{
+    self.ball.velocity[1] = -self.ball.velocity[1];
+}
 ```
 
 Чтобы мяч отталкивался от ракеток, нужно действовать по другому, так как ракетки не только движутся, но и имеют объем. Для этого мы воспользуемся формулой для проверки нахождения точки в прямоугольнике. Точной будет центр мяча, а прямоугольником - ракетка. Выделим этот код в отдельную функцию, не забываем про радиус мяча:
@@ -102,8 +102,8 @@ fn ball_in_rect(ball: &Ball, rect: &Rect) -> bool {
 
 ```rust
 if ball_in_rect(&self.ball, &self.right) || ball_in_rect(&self.ball, &self.left) {
-                self.ball.velocity[0] = -self.ball.velocity[0];
-            }
+    self.ball.velocity[0] = -self.ball.velocity[0];
+}
 ```
 
 Осталось последнее. Сейчас если игрок не попадет по мячу, он продолжит двигаться за краями игрового поля, что бы этого не произошло, нужно возвращать его в центр, когда он пересекает боковую границу:
@@ -111,10 +111,10 @@ if ball_in_rect(&self.ball, &self.right) || ball_in_rect(&self.ball, &self.left)
 ```rust
 if (self.ball.point.x + self.ball.radius * 2.0 < 0.0)
                 || (self.ball.point.x >= ARENA_WIDTH + self.ball.radius * 2.0)
-            {
-                self.ball.point.x = ARENA_WIDTH * 0.5;
-                self.ball.point.y = ARENA_HEIGHT * 0.5;
-            }
+{
+    self.ball.point.x = ARENA_WIDTH * 0.5;
+    self.ball.point.y = ARENA_HEIGHT * 0.5;
+}
 ```
 
 Готово! Теперь мы можем скомпилировать и запустить наш код с помощью `cargo run` и проверить, мяч движется и отскакивает от стен и ракеток. В финальном коде мы добавили линию, разделяющую поле пополам.
