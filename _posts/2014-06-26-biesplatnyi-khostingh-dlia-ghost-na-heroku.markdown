@@ -163,12 +163,12 @@ $ heroku config:set NODE_ENV=production
 $ git push heroku master
 {% endhighlight %}
 
-Через некоторые время ваш блог станет доступен по адресу: [http://my-blog-name.herokuapp.com/](my-blog-name.herokuapp.com)
+Через некоторые время ваш блог станет доступен по адресу: [my-blog-name.herokuapp.com](http://my-blog-name.herokuapp.com)
 
 
 #### Настройка блога
 
-Чтобы настроить свой блог просто перейдите [http://my-blog-name.herokuapp.com/ghost/](my-blog-name.herokuapp.com/ghost/) и укажите требуемые данные.
+Чтобы настроить свой блог просто перейдите [my-blog-name.herokuapp.com/ghost/](http://my-blog-name.herokuapp.com/ghost/) и укажите требуемые данные.
 
 
 ## Еще раз про картинки
