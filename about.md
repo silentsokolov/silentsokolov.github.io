@@ -5,5 +5,5 @@ title: About
 
 Hello!
 
-**Twitter**: [@silentsokolov](https://twitter.com/silentsokolov)  
-**Github**: [silentsokolov](https://github.com/silentsokolov)  
+Contact
+**Keybase**: [@silentsokolov](https://keybase.io/silentsokolov)   
