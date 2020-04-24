@@ -5,5 +5,4 @@ title: About
 
 Hello!
 
-Contact
-**Keybase**: [@silentsokolov](https://keybase.io/silentsokolov)   
+**Contact**: [@silentsokolov](https://keybase.io/silentsokolov)   
