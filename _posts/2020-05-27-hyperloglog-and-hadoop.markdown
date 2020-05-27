@@ -50,7 +50,7 @@ DATA_LOGS = LOAD '$input_data' AS (user_id:chararray, event_name:chararray);
 -- Производим нужные операции
 RESULT = GROUP DATA_LOGS BY event_name;
 RESULT = FOREACH RESULT {
-    GENERATE group AS event_name, HLL_CREATE(FILTERED.cookie) AS hll_sketch;
+    GENERATE group AS event_name, HLL_CREATE(DATA_LOGS.user_id) AS hll_sketch;
 };
 
 -- Сохраняем
