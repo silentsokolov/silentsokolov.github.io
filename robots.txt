@@ -8,8 +8,6 @@ user-agent: EmailCollector
 disallow: /
 
 user-agent: *
-disallow: /index.html
-disallow: /about.html
 disallow: /googlee2ccc40699d300c8.html
 disallow: /yandex_db4fbe6dcc657df9.html
 disallow: /keybase.txt
