@@ -22,7 +22,7 @@ sass:
 
 # Other Params
 include:            [ "robots.txt" ]
-exclude:            [ "Gemfile", "googlee2ccc40699d300c8.html", "yandex_db4fbe6dcc657df9.html" ]
+exclude:            [ "Gemfile" ]
 plugins:
   - jekyll-sitemap
   - jekyll-remote-theme
