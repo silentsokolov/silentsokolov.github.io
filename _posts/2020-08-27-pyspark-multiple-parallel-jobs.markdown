@@ -35,7 +35,7 @@ def processing_source(df, source):
 sc = SparkContext(appName='city by source')
 ss = SparkSession(sc)
 
-df = ss.read.format('csv').load('/path/to/file.t=csv', schema=SCHEMA)
+df = ss.read.format('csv').load('/path/to/file.csv', schema=SCHEMA)
 df = df.select('...')  # prepare data
 df = df.persist(StorageLevel.DISK_ONLY_2)  # or df.cache()
 
