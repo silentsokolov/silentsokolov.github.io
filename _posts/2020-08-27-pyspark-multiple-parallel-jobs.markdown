@@ -28,15 +28,14 @@ SCHEMA = t.StructType([
 
 
 def processing_source(df, source):
-    df_local = df.filter(f.col('parents') == source)
+    df_local = df.filter(f.col('source') == source)
     df_local = '...'
 
 
 sc = SparkContext(appName='city by source')
-sc.setLogLevel('WARN')
 ss = SparkSession(sc)
 
-df = ss.read.format('csv').option('sep', '\t').load('/path/to/file.tsv', schema=SCHEMA)
+df = ss.read.format('csv').load('/path/to/file.t=csv', schema=SCHEMA)
 df = df.select('...')  # prepare data
 df = df.persist(StorageLevel.DISK_ONLY_2)  # or df.cache()
 
@@ -45,5 +44,6 @@ pool.map(lambda s: processing_source(df, s), SOURCE_LIST)
 pool.close()
 pool.join()
 
+# run
 # spark-submit --conf spark.scheduler.mode=FAIR ... task.py
 ```
