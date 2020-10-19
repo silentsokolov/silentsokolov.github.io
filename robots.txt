@@ -6,6 +6,3 @@ sitemap: {{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}
 
 user-agent: EmailCollector
 disallow: /
-
-user-agent: *
-disallow: /keybase.txt
