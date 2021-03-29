@@ -1,6 +1,6 @@
 ---
 title:  "Spark UDF или всегда используйте explain"
-meta_description: "Разбераемся почему Spark выполняет UDF несколько раз"
+meta_description: "Разбираемся почему Spark выполняет UDF несколько раз"
 date:   2021-02-27 12:06:30
 ---
 
